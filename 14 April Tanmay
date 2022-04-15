@@ -119,4 +119,53 @@ public class Assignment3question1 {
 
 _____________________________________________________________________________________________________________________________________________________________________
 
+package new_package;
+
+import java.util.Scanner;
+
+public class Assignment3question4 {
+
+	public static void main(String[] args) {
+		int n,m,temp1 = 0,temp2 = 0;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the ARUNS number :");
+		n=sc.nextInt();
+		int arun[]= new int[n];
+		
+		for(int i=0; i<arun.length; i++) {
+			System.out.println("Enter the element"+i);
+			arun[i]=sc.nextInt();
+			
+		}
+		//System.out.println("Enter the NAVEENS number :");
+	    m=n;
+		int naveen[]= new int[m];
+		System.out.println("Enter the NAVEENS number :");
+		
+		for(int j=0; j<naveen.length; j++) {
+			System.out.println("Enter the element"+j);
+			naveen[j]=sc.nextInt();
+			}
+		
+		for(int i=0; i<arun.length; i++) {
+			temp1=temp1+arun[i];
+			
+		}
+		for(int j=0; j<naveen.length; j++) {
+			temp2=temp2+naveen[j];
+			}
+		
+		if(temp1>temp2) {
+			System.out.println("Arun wins!");
+			
+		}
+		else {
+			System.out.println("naveen wins!");
+		}
+	
+
+	}
+
+}
+
 
