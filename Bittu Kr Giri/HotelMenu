@@ -1,0 +1,60 @@
+# Assignment-3
+import java.util.InputMismatchException;
+import java.util.Scanner;
+class HelloWorld {
+    public static void main(String[] args) {
+    try
+        {
+            String str;
+            Scanner sys=new Scanner(System.in);
+            System.out.println("bihari hotel\n menu card");
+            System.out.println("1.Vegetarian \n2. Non vegetarian\nEnter your choice");
+            int n=sys.nextInt();
+            switch(n)
+            {
+                case 1:
+                    System.out.println("vegetrain\nNon vegetrain\nMenu card");
+                    do
+                    {
+                        System.out.println("1.LITTI CHOKHA\n2.PURI KHIR SABJI\n3.CHICKEN\n4.BRIYANI\n5MUTTON");
+                        int n1=sys.nextInt();
+                        switch(n1)
+                        {
+                            case 1:
+                                System.out.println("The Price is Rs.50");
+                                break;
+                                case 2:
+                                    System.out.println("The Price is Rs.80");
+                                    break;
+                                    case 3:
+                                        System.out.println("The Price is Rs. 100");
+                                        break;
+                                        case 4:
+                                            System.out.println("The Price is Rs. 120");
+                                            break;
+                                            case 5:
+                                                System.out.println("The Price is Rs. 150");
+                                                break;
+                                                default:
+                                                System.out.println("No more Options are Available");
+                        }
+                        System.out.println("Do you want to continue(y/n)?");
+                        str=sys.next();
+                    }while(str.equals("y"));
+                    break;
+                    default:
+                    System.out.println("no more options are avilable");
+            }
+        }
+        catch(InputMismatchException e) {
+            System.out.println("need to enter only numbers");
+        }
+        catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+        finally
+        {
+        System.out.println("The Program execution is Terminated");
+        }
+    }
+}
