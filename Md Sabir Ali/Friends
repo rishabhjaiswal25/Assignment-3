@@ -1,0 +1,35 @@
+package assignment_1;
+import java.util.Scanner;
+public class Friends {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+				int a,b,c=0;
+				Scanner ob=new Scanner(System.in);
+				System.out.println("Enter the number of friends :");
+				a=ob.nextInt();
+				System.out.println("Enter the size of an array :");
+				
+				b=ob.nextInt();
+				
+				int m[]= new int[b];
+				
+				for(int i=0; i<m.length; i++) {
+					System.out.println("Enter the element"+i); 
+					m[i]=ob.nextInt();
+					
+				}
+				
+				for(int i=0; i<m.length; i++) {
+					c=c+m[i];	
+				}
+				
+				if(c%a==0) {
+					System.out.println("YES");
+				}
+				else {
+					System.out.println("NO");
+				}
+				}
+
+		}
