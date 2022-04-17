@@ -1,0 +1,58 @@
+import java.util.Scanner;
+public class  Main 
+{
+    public static void main(String[] args) {
+		int r,c;
+		Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the row size: ");
+        r = sc.nextInt();
+        System.out.println("Enter the column size: ");
+        c = sc.nextInt();
+        int[][] arr;
+        arr = new int[r][c];
+        System.out.println("Enter "+r+"*"+c+ " array elements are:");
+		for(int i=0;i<c;i++) {
+			for(int j=0;j<r;j++) {
+			arr[i][j]=sc.nextInt();
+			}
+		}
+		
+		
+		
+		for(int i=0;i<c;i++) {
+			for(int j=0;j<r;j++) {
+				System.out.print(arr[i][j]+" ");
+			}
+			System.out.println("");
+		}
+		
+		for(int i=0;i<r;i++) {
+			int max=0,min=999999999;
+			for(int j=0;j<c;j++) {
+				if (arr[i][j]>max) {
+					max=arr[i][j];
+				}
+				if(arr[i][j]<min) {
+					min=arr[i][j];
+				}
+			}
+			System.out.println("The minimum and maximum in"+(i+1)+"th row is "+min+","+max);
+		}
+		for(int j=0;j<c;j++) {
+			int max=0,min=999999999;
+			for(int i=0;i<c;i++) {
+				if (arr[i][j]>max) {
+					max=arr[i][j];
+				}
+				if(arr[i][j]<min) {
+					min=arr[i][j];
+				}
+			}
+			System.out.println("The minimum and maximum in"+(j+1)+"rd column is "+min+","+max);
+		}
+		
+		sc.close();
+
+	}
+
+}
