@@ -1,0 +1,175 @@
+# Assignment-3
+JAVA
+1. Duplicate and unique
+
+import java.util.*;
+public class DupUniq{
+public static void main(String args[]){
+int n,Dup=0,Uniq=0;
+Scanner sc=new Scanner(System.in);
+n=sc.nextInt();
+int [] arr = new int [n];
+for(int i=0;i<n;i++)
+{
+   arr[i]=sc.nextInt();
+}
+
+Map<Integer,Integer>map=new HashMap<>();
+int i=0;
+while(i<n){
+   if(map.containsKey(arr[i])==false){
+     map.put(arr[i],1);
+   }
+   else{
+     int oldval=map.get(arr[i]);
+     int newval=oldval+1;
+     map.put(arr[i],newval);
+    }
+    ++i;
+}
+Set<Map.Entry<Integer,Integer>>hmap=map.entrySet();
+for(Map.Entry<Integer,Integer>data:hmap){
+  if(data.getValue()>1)
+   {
+    Dup=Dup+1;
+   }
+   else{
+    Uniq=Uniq+1;
+   }
+}  
+    System.out.println("No.of Duplicate elment= : "+Dup);
+        System.out.print("No.of Unique elment= : "+Uniq);
+}
+}
+
+2.Share chocolates
+
+import java.util.*;
+public class Share{
+ public static void main(String args[]){
+    int n,choc;
+    Scanner sc = new Scanner(System.in);
+    n=sc.nextInt();
+    choc=sc.nextInt();
+    if(choc%n==0){
+     System.out.println("Yes");
+   }
+   else{
+     System.out.println("No");
+   }
+}
+}
+ 
+3.Negativearray
+
+import java.util.*;
+public class NegArray{
+public static void main(String args[]){
+int n,Dup=0,Uniq=0;
+Scanner sc=new Scanner(System.in);
+n=sc.nextInt();
+int [] arr = new int [n];
+for(int i=0;i<n;i++)
+{
+   arr[i]=sc.nextInt();
+}
+
+for(int i=0;i<n;i++){
+   if(arr[i]<0){
+   continue;
+   } 
+   else{
+    for(int j=i+1;j<n;j++){
+     if(arr[j]<0){
+     int temp=arr[i];
+     arr[i]=arr[j];
+     arr[j]=temp;
+
+
+    }
+    }
+   } 
+}
+
+for(int i=0;i<n;i++)
+{
+   System.out.print(arr[i]+" ");
+}
+
+
+}
+} 
+
+4.Dice values
+
+import java.util.*;
+public class Dice{
+public static void main(String args[]){
+int n=10,Dup=0,Uniq=0;
+Scanner sc=new Scanner(System.in);
+int [] arr = new int [n];
+int [] array = new int [n];
+int sum1=0;
+int sum2=0;
+System.out.println("Arun Dice Choice:");
+for(int i=0;i<n;i++)
+{
+   arr[i]=sc.nextInt();
+   sum1=sum1+arr[i];
+}
+System.out.println("Naveen Dice Choice:");
+for(int i=0;i<n;i++)
+{
+   array[i]=sc.nextInt();
+   sum2=sum2+arr[i];
+}
+if(sum1>sum2){
+System.out.println("Arun Wins!!!");
+}
+else{
+System.out.println("Naveen Wins!!!");
+}
+}
+} 
+
+5.Matrix
+
+import java.util.*;
+public class Matrix{
+  public static void main(String args[]){
+   int n,m;
+   Scanner sc=new Scanner(System.in);
+   n=sc.nextInt();
+   m=sc.nextInt();
+   int arr[][]=new int[n][m];
+   for(int i=0;i<n;i++){
+      for(int j=0;j<m;j++){
+         arr[i][j]=sc.nextInt();
+      }
+   }
+   for(int i=0;i<n;i++){
+      int max=arr[i][0];
+      int min=arr[i][0]; 
+      for(int j=0;j<m;j++){
+        if(arr[i][j]>max)
+        max=arr[i][j];
+        if(arr[i][j]<min)
+        min=arr[i][j];
+      }
+      System.out.println("Maximum element of "+ i +" row is : "+max );
+
+      System.out.println("Minimum element of "+ i +" row is : "+min );
+   }
+   for(int i=0;i<m;i++){
+      int max=arr[0][i];
+      int min=arr[0][i]; 
+      for(int j=0;j<n;j++){
+        if(arr[j][i]>max)
+        max=arr[j][i];
+        if(arr[j][i]<min)
+        min=arr[j][i];
+      }
+      System.out.println("Maximum element of "+ i +" column is : "+max );
+
+      System.out.println("Minimum element of "+ i +" column is : "+min );
+   }
