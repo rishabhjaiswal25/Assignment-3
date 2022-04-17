@@ -1,0 +1,56 @@
+package co.solution;
+import java.util.*;
+public class Aq4 {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter dice rolls of Arun");
+		int a[]=new int [10];
+		int i;
+		for(i=0;i<10;i++)
+		{
+			a[i]=sc.nextInt();
+		}
+		if(a.length<10)
+		{
+			System.out.println("Dice rolls incomplete");
+		}
+		System.out.println("Enter dice rolls of Naveen");
+		int b[]=new int [10];
+		for(i=0;i<10;i++)
+		{
+			b[i]=sc.nextInt();
+		}
+		if(b.length<10)
+		{
+			System.out.println("Dice rolls incomplete");
+		}
+		
+			int arun=0,naveen=0;
+		for(i=0;i<10;i++)
+		{
+			if(a[i]>b[i])
+			{
+				arun++;
+			}
+			else if(a[i]<b[i])
+			{
+				naveen++;
+			}
+			else {
+				i++;
+			}
+		}
+		if(arun>naveen)
+		{
+			System.out.println("Arun wins");
+		}
+		else if(naveen>arun)
+		{
+			System.out.println("Naveen wins");
+		}
+		else {
+			System.out.println("its a tie");
+		}
+	}
+}

@@ -1,0 +1,141 @@
+package co.solution;
+import java.util.*;
+public class Menu {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner (System.in);
+		
+		String str,str1;
+		System.out.println("HMR Hotel\n Menu Card");
+		System.out.println("1.Non-Vegetarian \n2.Vegetarian \n3.Chinese \nEnter your choice:");
+		int n=sc.nextInt();
+try {
+	do {
+		
+		switch(n)
+		{
+		case 1:
+			System.out.println("Non-Vegetarian\n Menu Card");
+			do {
+				 System.out.println("1.Chicken Briyani\n2.Mutton Briyani\n3.Fish Briyani\n4.Prawn Briyani\n Enter your choice:");
+				 int n1=sc.nextInt();
+				 switch(n1)
+				 {
+				 case 1:
+					 System.out.println("The Price is Rs.250");
+					 break;
+				 case 2:
+					 System.out.println("The Price is Rs.350");
+					 break;
+				 case 3:
+					 System.out.println("The Price is Rs.150");
+					 break;
+				 case 4:
+					 System.out.println("The Price is Rs.550");
+					 break;	 
+				 default:
+					 System.out.println("No more Options are Available");
+					 }
+				 sc.nextLine();
+
+				 System.out.println("Do you want to continue(y/n)?");
+
+				 str=sc.nextLine();
+				 }while(str.equals("y"));
+
+				 break;
+				 
+		case 2:
+			System.out.println("Vegetarian\n Menu Card");
+			do {
+				 System.out.println("1.Paneer gravy\n2.Fried rice\n3.Pullao\n4.Soup\n Enter your choice:");
+				 int n1=sc.nextInt();
+				 switch(n1)
+				 {
+				 case 1:
+					 System.out.println("The Price is Rs.250");
+					 break;
+				 case 2:
+					 System.out.println("The Price is Rs.350");
+					 break;
+				 case 3:
+					 System.out.println("The Price is Rs.150");
+					 break;
+				 case 4:
+					 System.out.println("The Price is Rs.550");
+					 break;	 
+				 default:
+					 System.out.println("No more Options are Available");
+					 }
+				 sc.nextLine();
+
+				 System.out.println("Do you want to continue(y/n)?");
+
+				 str=sc.nextLine();
+				 }while(str.equals("y"));
+
+				 break;
+				 
+		case 3:
+			System.out.println("Chinese\n Menu Card");
+			do {
+				 System.out.println("1.Fried noodles\n2.Noodle soup\n3.Ramen\n4.Rice cakes\n Enter your choice:");
+				 int n1=sc.nextInt();
+				 switch(n1)
+				 {
+				 case 1:
+					 System.out.println("The Price is Rs.250");
+					 break;
+				 case 2:
+					 System.out.println("The Price is Rs.350");
+					 break;
+				 case 3:
+					 System.out.println("The Price is Rs.150");
+					 break;
+				 case 4:
+					 System.out.println("The Price is Rs.550");
+					 break;	 
+				 default:
+					 System.out.println("No more Options are Available");
+					 }
+				 sc.nextLine();
+
+				 System.out.println("Do you want to continue(y/n)?");
+
+				 str=sc.nextLine();
+				 }while(str.equals("y"));
+
+				 break;
+		}
+		 System.out.println("Do you want to continue with other options?(y/n)?");
+		str1=sc.nextLine();
+	}while(str1.equals("y"));
+}
+catch (InputMismatchException e)
+{
+
+	 // TODO: handle exception
+
+	 System.out.println("Need to enter only numbers");
+
+	}
+
+	catch (Exception e)
+	{
+
+	 // TODO: handle exception
+
+	System.out.println(e.getMessage());
+
+	}
+
+	 finally
+	 {
+
+	 System.out.println("The Program execution is Terminated");
+
+	 }
+	}
+}
+				
